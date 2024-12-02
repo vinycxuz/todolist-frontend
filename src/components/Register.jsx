@@ -33,9 +33,9 @@ const Register = () => {
   return (
     <div class="flex flex-col w-full md:w-1/2 xl:w-2/5 2xl:w-2/5 3xl:w-1/3 mx-auto p-8 md:p-10 2xl:p-12 3xl:p-14 bg-[#ffffff] rounded-2xl shadow-xl">
       <div class="flex flex-row gap-3 pb-4">
-        <h1 class="text-3xl font-bold text-[#4B5563] my-auto">Your Company</h1>
+        <h1 class="text-3xl font-bold text-[#4B5563] my-auto">Register in ToDo App</h1>
       </div>
-      <div class="text-sm text-[#6B7280] pb-8">Sign up for an account on Your Company.</div>
+      <div class="text-sm text-[#6B7280] pb-8">Sign up for an account</div>
       <form class="flex flex-col" onSubmit={handleSubmit}>
         <div class="pb-2">
           <label htmlFor="name" class="block mb-2 text-sm font-medium text-[#111827]">Name</label>
@@ -88,7 +88,7 @@ const Register = () => {
           </div>
         </div>
         <button type="submit" class="w-full text-[#FFFFFF] bg-[#4F46E5] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-6">Sign Up</button>
-        <div class="text-sm text-[#6B7280] text-center">Already have an account? <a href="#" class="font-medium text-[#4F46E5] hover:underline">Login</a></div>
+        <div class="text-sm text-[#6B7280] text-center">Already have an account? <a href="/" class="font-medium text-[#4F46E5] hover:underline">Login</a></div>
       </form>
     </div>
   );

@@ -4,11 +4,13 @@ import Register from './components/Register';
 import Tasks from './components/Tasks';
 import { AuthProvider } from './context/AuthContext';
 import ListTasks from './components/ListTasks';
+import Menu from './components/Menu';
 
 function App() {
   return (
     <AuthProvider>
       <Router>
+      <Menu />
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
