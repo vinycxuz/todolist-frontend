@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "undefined/subscriptions/dd5519ed-68ce-43dd-9121-e0bfabe16704/resourceGroups/Selfdevelopment/providers/Microsoft.Web/sites/todolistfrontviny",
+  "appService.deploySubpath": "build"
+}
