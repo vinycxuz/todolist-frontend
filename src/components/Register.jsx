@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -16,11 +17,14 @@ const Register = () => {
     });
   };
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post("https://todo-list-vinycxuz-902a28c21ca1.herokuapp.com/users/register", formData);
       console.log("User registered:", response.data);
+      navigate("/tasks")
     } catch (error) {
       console.error("Error registering user:", error.response.data);
     }
