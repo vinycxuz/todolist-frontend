@@ -48,28 +48,50 @@ const ListTasks = () => {
   };
 
   return (
-    <div>
-      <ul>
-        {tasks.map(task => (
-          <li key={task._id}>
-            <h3>{task.title}</h3>
-            <p>{task.description}</p>
-            <p>Status: {task.status ? 'Completed' : 'Pending'}</p>
-            <p>Created on: {new Date(task.creation_date).toLocaleString()}</p>
-            <p>Updated on: {new Date(task.updated_date).toLocaleString()}</p>
-            {task.status === false && (
-              <button onClick={() => handleStatusChange(task._id, true)}>
-                Mark as Completed
-              </button>
-            )}
-            <button onClick={() => handleDelete(task._id)}>
-              Delete Task
-            </button>
-          </li>
-        ))}
-      </ul>
+    <div className="overflow-hidden shadow-md rounded-lg flex flex-col justify-center items-center h-[50vh]">
+      <h1 className="font-semibold">Todo List</h1>
+      <table className="w-full text-left">
+        <thead className="bg-[#557ac5] text-[#fafcff]">
+          <tr>
+            <th className="py-0 text-center font-bold p-4">Title</th>
+            <th className="py-0 text-center font-bold p-4">Description</th>
+            <th className="py-0 text-center font-bold p-4">Status</th>
+            <th className="py-0 text-center font-bold p-4">Created On</th>
+            <th className="py-0 text-center font-bold p-4">Updated On</th>
+            <th className="py-0 text-center font-bold p-4">Actions</th>
+          </tr>
+        </thead>
+        <tbody className="bg-white text-gray-500">
+          {tasks.map(task => (
+            <tr key={task._id} className="py-7">
+              <td className="py-7 text-center p-4">{task.title}</td>
+              <td className="py-7 text-center p-4">{task.description}</td>
+              <td className="py-7 text-center p-4">{task.status ? 'Completed' : 'Pending'}</td>
+              <td className="py-7 text-center p-4">{new Date(task.creation_date).toLocaleString()}</td>
+              <td className="py-7 text-center p-4">{new Date(task.updated_date).toLocaleString()}</td>
+              <td className="py-7 text-center p-4">
+                {task.status === false && (
+                  <button 
+                    className="bg-blue-500 text-white px-4 py-2 rounded" 
+                    onClick={() => handleStatusChange(task._id, true)}
+                  >
+                    Mark as Completed
+                  </button>
+                )}
+                <button 
+                  className="bg-red-500 text-white px-4 py-2 rounded ml-2" 
+                  onClick={() => handleDelete(task._id)}
+                >
+                  Delete Task
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
 
 export default ListTasks;
+
