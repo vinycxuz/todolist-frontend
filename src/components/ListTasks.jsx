@@ -48,9 +48,9 @@ const ListTasks = () => {
   };
 
   return (
-    <div className="overflow-hidden shadow-md rounded-lg flex flex-col justify-center items-center h-[50vh]">
+    <div className="overflow-hidden shadow-md rounded-lg flex flex-col justify-center items-center h-[55vh]">
       <h1 className="font-semibold">Todo List</h1>
-      <table className="w-full text-left">
+      <table className="w-3/4 text-left">
         <thead className="bg-[#557ac5] text-[#fafcff]">
           <tr>
             <th className="py-0 text-center font-bold p-4">Title</th>

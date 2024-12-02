@@ -6,7 +6,7 @@ const Menu = () => {
     <nav className='flex w-full justify-center'>
       <ul className='flex w-2/4 justify-between'>
         <li className='font-semibold'>
-          <Link to="/login">Login</Link>
+          <Link to="/">Login</Link>
         </li>
         <li className='font-semibold'>
           <Link to="/register">Register</Link>
