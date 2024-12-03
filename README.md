@@ -13,11 +13,12 @@ Para realizar todas as operações de tarefas, o usuário deve estar previamento
 
 
 
-## Features
+## Updates incoming
 
 - Fullscreen mode
 - responsive design
-
+- logs for users
+- model to confirm choice like before delete task
 
 
 
